@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- NOTE TO SELF: WITHOUT THE BELOW ITEM, EVERYTHING LOOKS TINY ON MOBILE-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <link href="/styles.css" rel="stylesheet">
+    <title>FCC: Survey Form</title>
+</head>
+
+<body>
+    <div class="header-text">
+        <h1 id="title">
+            freeCodeCamp Survey Form
+        </h1>
+        <p id="description">
+            Thank you for taking the time to help us improve the platform
+        </p>
+    </div>
+    <form id="survey-form">
+
+        <label id="name-label" for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label id="email-label" for="email">Email</label>
+        <input type="email" placeholder="Enter your Email" id="email" required>
+
+        <label id="number-label" for="number">Age <small>(optional)</small></label>
+        <input type="number" placeholder="Age" min="10" max="100" id="number">
+
+        <label for="dropdown">Choose a car:</label>
+        <select required name="cars" id="dropdown">
+            <option value="" disabled selected>--Please select an option--</option>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+        </select>
+
+        <!-- group for the radio buttons -->
+        <fieldset>
+            <legend>
+                Would you recommend freeCodeCamp to a friend?
+            </legend>
+            <div class="radio-choices">
+                <div>
+                    <input type="radio" id="contactChoice1" name="contact" value="email" required>
+                    <label for="contactChoice1">Email</label>
+                </div>
+                <div>
+                    <input type="radio" id="contactChoice2" name="contact" value="phone">
+                    <label for="contactChoice2">Phone</label>
+                </div>
+                <div>
+                    <input type="radio" id="contactChoice3" name="contact" value="mail">
+                    <label for="contactChoice3">Mail</label>
+                </div>
+            </div>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>
+                What would you like to see improved? <small>(Check all that apply)</small>
+            </legend>
+            <div class="checkbox-choices">
+                <div>
+                    <input type="checkbox" id="improveChoice1" name="improve" value="frontend">
+                    <label for="improveChoice1">Front-end Projects</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="improveChoice2" name="imrpove" value="backend">
+                    <label for="improveChoice2">Back-end Projects</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="improveChoice3" name="improve" value="dataviz">
+                    <label for="improveChoice3">Data Visualization</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="improveChoice4" name="improve" value="challenges">
+                    <label for="improveChoice4">Challenges</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="improveChoice5" name="imrpove" value="opensource">
+                    <label for="improveChoice5">Open Source</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="improveChoice6" name="improve" value="gitter">
+                    <label for="improveChoice6">Gitter</label>
+                </div>
+            </div>
+        </fieldset>
+
+        <label for="textarea">Any additional comments? <small>(Optional)</small></label>
+        <textarea id="textarea" rows="5" placeholder="Enter your comments here..."></textarea>
+
+        <!-- See https://www.w3.org/WAI/tutorials/forms/labels/#labeling-buttons for labels of buttons -->
+        <button id="submit" formaction="#" >
+            Submit
+        </button>
+    </form>
+</body>
+
+</html>

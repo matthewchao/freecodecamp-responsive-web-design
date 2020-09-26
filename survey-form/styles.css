@@ -1,0 +1,47 @@
+body {
+  background-image: linear-gradient(
+      rgba(28, 47, 47, 0.8),
+      rgba(28, 47, 47, 0.8)
+    ),
+    url("https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  margin: 0;
+  padding: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-text {
+  color: white;
+  text-align: center;
+}
+
+.header-text p {
+  font-style: italic;
+}
+form {
+  background-image: linear-gradient(
+    rgba(47, 79, 79, 0.95),
+    rgba(47, 79, 79, 0.95)
+  );
+  display: flex;
+  flex-direction: column;
+  max-width: 992px;
+  padding: 24px;
+  color: white;
+}
+
+form > label + input,
+form > label + select,
+form > label + textarea,
+fieldset {
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: darkmagenta;
+  color: white;
+  font-size: inherit;
+}
